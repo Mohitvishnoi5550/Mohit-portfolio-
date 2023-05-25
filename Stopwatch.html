@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .stopwatch {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 100px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stopwatch</h1>
+  <div class="stopwatch">
+    <p id="time">00:00:00</p>
+  </div>
+  <div class="buttons">
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+
+  <script>
+    var startTime;
+    var elapsedTime = 0;
+    var timerInterval;
+
+    function start() {
+      startTime = Date.now() - elapsedTime;
+      timerInterval = setInterval(updateTime, 10);
+    }
+
+    function stop() {
+      clearInterval(timerInterval);
+    }
+
+    function reset() {
+      clearInterval(timerInterval);
+      elapsedTime = 0;
+      document.getElementById("time").textContent = "00:00:00";
+    }
+
+    function updateTime() {
+      var currentTime = Date.now();
+      elapsedTime = currentTime - startTime;
+      var formattedTime = formatTime(elapsedTime);
+      document.getElementById("time").textContent = formattedTime;
+    }
+
+    function formatTime(milliseconds) {
+      var date = new Date(milliseconds);
+      var hours = date.getUTCHours().toString().padStart(2, "0");
+      var minutes = date.getUTCMinutes().toString().padStart(2, "0");
+      var seconds = date.getUTCSeconds().toString().padStart(2, "0");
+      var milliseconds = Math.floor(date.getUTCMilliseconds() / 10).toString().padStart(2, "0");
+      return hours + ":" + minutes + ":" + seconds + ":" + milliseconds;
+    }
+  </script>
+</body>
+</html>

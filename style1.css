@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Roboto&family=Ubuntu+Condensed&family=Wix+Madefor+Display:wght@500&display=swap');
+    * { margin: 00;
+    padding: 00;
+    box-sizing: border-box;
+    }
+    html { scroll-behavior: smooth;
+    }
+    body { background: black;
+    color: white;
+    width: 100%;
+    }
+        a { text-decoration: none;
+        color: white;
+        font-family: "Wix", sans-serif;
+        }
+        button { border: none;
+        border-radius: 5px;
+        background: green;
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+        }
+        p { font-family: "Roboto", sans-serif;}
+        span { font-family: "poppins", sans-serif;}

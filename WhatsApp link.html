@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhatsApp Link Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #resultContainer {
+      text-align: center;
+    }
+
+    #link {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>WhatsApp Link Generator</h1>
+  <div>
+    <input type="text" id="phoneNumber" placeholder="Phone Number">
+    <input type="text" id="message" placeholder="Message">
+    <button id="generateBtn">Generate Link</button>
+  </div>
+  <div id="resultContainer" style="display: none;">
+    <input type="text" id="link" readonly>
+    <button id="copyBtn">Copy Link</button>
+    <button id="openBtn">Open Link</button>
+  </div>
+
+  <script>
+    // Generate WhatsApp link
+    function generateLink() {
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var message = document.getElementById("message").value;
+      var encodedMessage = encodeURIComponent(message);
+
+      var link = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodedMessage;
+      document.getElementById("link").value = link;
+      document.getElementById("resultContainer").style.display = "block";
+    }
+
+    // Copy link to clipboard
+    function copyLink() {
+      var linkInput = document.getElementById("link");
+      linkInput.select();
+      linkInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Copied the link to clipboard!");
+    }
+
+    // Open link in new tab
+    function openLink() {
+      var link = document.getElementById("link").value;
+      window.open(link, "_blank");
+    }
+
+    // Add event listeners to buttons
+    document.getElementById("generateBtn").addEventListener("click", generateLink);
+    document.getElementById("copyBtn").addEventListener("click", copyLink);
+    document.getElementById("openBtn").addEventListener("click", openLink);
+  </script>
+</body>
+</html>

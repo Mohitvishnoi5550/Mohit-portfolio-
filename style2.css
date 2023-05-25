@@ -1,0 +1,127 @@
+/* header style start */
+        .navbar { width: 100%;
+        margin: 10px 5px;
+        position: sticky;
+        }
+        .navbar img { width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        }
+        .navbar a { padding: 10px 30px;
+        margin-left: 30px;
+        }
+        .hiro { display: flex;
+        width: 100%;
+        margin-top: 20px;
+        }
+        .hiro1 { width: 75%;}
+        .hiro2 { width: 50%;
+        margin-left: 10%;
+        }
+        .hiro2 img { height: 300px;
+        width: 330px;
+        border-radius: 50%;
+        }
+        .hiro1 { font-size: 47px;}
+/* header style finishd*/
+/* q style start */
+        .q { text-align: center;
+        margin-top: 30px;
+        font-size: 18px;
+        }
+        .q i { font-size: 70px;
+        margin-top: 20px;
+        }
+/* q style finished */
+/* services style stard */
+        #services { text-align: center;
+        margin-top: 25px;
+        }
+        .serv { width: 100%;
+        margin-top: 25px;
+        display: flex;
+        text-align: center;
+        }
+        .serv1 { width: 33%;
+        font-size: 50px;
+        padding: 10px 20px;
+        }
+        .serv2 { width: 33%;
+        font-size: 50px;
+        padding: 10px 20px;
+        }
+        .serv3 { width: 33%;
+        font-size: 50px;
+        padding: 10px 20px;
+        }
+        .serv button { margin-top: 10px;
+        padding: 25px 80px;
+        }
+/* services style finished */
+/* past projects style stard */
+        #past { margin-top: 25px;
+        text-align: center;
+        }
+        .pastp { width: 100%;
+        display: flex;
+        margin-top: 25px;
+        font-size: 30px;
+        }
+        .pastp1 { width: 33%;
+        padding: 10px 15px;
+        text-align: center;
+        }
+        .pastp2 { width: 33%;
+        padding: 10px 15px;
+        text-align: center;
+        }
+        .pastp3 { width: 33%;
+        padding: 10px 15px;
+        text-align: center;
+        }
+        .pastp a { padding: 25px 20px;
+        margin-top: 15px;
+        background: green;
+        color: white;
+        }
+/* past projects style finished */
+/* about us style stard */
+        #about { margin-top: 30px;
+        text-align: center;
+        }
+        .aboutus { display: flex;
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+        }
+        aboutus1 { height: 600px;
+        
+        }
+        .aboutus2 { width: 50%;
+        height: 600px;
+        margin-left: 5%;
+        font-size: 50px;
+        }
+        .aboutus img { width: 400px;
+        height: 800px;
+        }
+/* about us finished */
+/* contact us style stard*/
+        .contact { text-align: center;}
+        .contact input { height: 60px;
+        width: 90%;
+        margin-top: 60px;
+        }
+        textarea { width: 90%;
+        height: 60px;
+        margin-top: 40px;
+        }
+        form button { padding: 25px 80px;
+        font-size: 50px;
+        margin-top: 30px;
+        margin-left: 30px;
+        }
+/* contact us finished */
+        .fu { text-align: center;
+        margin-top: 50px;
+        }
